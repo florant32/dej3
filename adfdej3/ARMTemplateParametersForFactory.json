@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdej3"
+		},
+		"LS_DesjardinsLakehouse_connectionString": {
+			"value": ""
+		},
+		"LS_Desjardins_LAkeHouse_Destination_connectionString": {
+			"value": ""
+		}
+	}
+}
