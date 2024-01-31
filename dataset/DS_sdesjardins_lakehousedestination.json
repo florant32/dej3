@@ -1,0 +1,23 @@
+{
+	"name": "DS_sdesjardins_lakehousedestination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Desjardins_LAkeHouse_Destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sourcefelix2023"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
