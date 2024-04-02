@@ -1,0 +1,43 @@
+{
+	"name": "DataManipulation",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Xml2",
+						"type": "DatasetReference"
+					},
+					"name": "XmlDataSource",
+					"description": "xmldatasource"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Json2",
+						"type": "DatasetReference"
+					},
+					"name": "JasonSink"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: false,",
+				"     validateSchema: true,",
+				"     ignoreNoFilesFound: false,",
+				"     purgeFiles: true,",
+				"     validationMode: 'dtd',",
+				"     namespaces: true) ~> XmlDataSource",
+				"XmlDataSource sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> JasonSink"
+			]
+		}
+	}
+}
