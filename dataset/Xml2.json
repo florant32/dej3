@@ -1,0 +1,18 @@
+{
+	"name": "Xml2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "testcdata.xml",
+				"fileSystem": "fsydejdemo1"
+			}
+		}
+	}
+}
