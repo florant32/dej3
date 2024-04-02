@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "testcdata.xml",
+				"fileName": "cdata_type.xml",
 				"fileSystem": "fsydejdemo1"
 			}
 		}
