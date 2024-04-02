@@ -1,0 +1,68 @@
+{
+	"name": "pl_module_copyFromAdlsXmlToAdlsJson",
+	"properties": {
+		"description": "Ce pipeline sert à copier un fichier xml se trouvant sur un data lake ADLS vers un fichier json se trouvant sur un data lake ADLS",
+		"activities": [
+			{
+				"name": "copy_FromAdlsXmlToAdlsJson",
+				"description": "Cette activité sert à copier un fichier xml se trouvant sur un data lake ADLS vers un fichier json se trouvant sur un data lake ADLS",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "XmlSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "XmlReadSettings",
+							"validationMode": "xsd",
+							"detectDataType": true,
+							"namespaces": true
+						}
+					},
+					"enableStaging": false
+				}
+			}
+		],
+		"parameters": {
+			"pSourceStorageAccountName": {
+				"type": "string"
+			},
+			"pSourceFileSystem": {
+				"type": "string"
+			},
+			"pSourceDirectory": {
+				"type": "string"
+			},
+			"pSourceFileName": {
+				"type": "string",
+				"defaultValue": "single_contact.xml"
+			},
+			"pSinkStorageAccountName": {
+				"type": "string"
+			},
+			"pSinkFileSystem": {
+				"type": "string"
+			},
+			"pSinkDirectory": {
+				"type": "string"
+			},
+			"pSinkFileName": {
+				"type": "string",
+				"defaultValue": "single_contact.json"
+			}
+		},
+		"annotations": []
+	}
+}
