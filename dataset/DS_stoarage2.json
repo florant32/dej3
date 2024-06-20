@@ -1,0 +1,28 @@
+{
+	"name": "DS_stoarage2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_testexfiltration2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "cdata_type.xml",
+				"container": "fsydejdemo1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "<?xml version='1.0' encoding='UTF-8' ?>",
+				"type": "String"
+			}
+		]
+	}
+}
