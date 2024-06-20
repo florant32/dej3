@@ -11,6 +11,9 @@
 		"LS_Desjardins_LAkeHouse_Destination_connectionString": {
 			"value": ""
 		},
+		"LS_testexfiltration2_connectionString": {
+			"value": ""
+		},
 		"Ls_testlinkservicestorage_connectionString": {
 			"value": ""
 		}

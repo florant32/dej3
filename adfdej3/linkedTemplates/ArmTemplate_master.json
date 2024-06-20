@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Desjardins_LAkeHouse_Destination'"
 		},
+		"LS_testexfiltration2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_testexfiltration2'"
+		},
 		"Ls_testlinkservicestorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Ls_testlinkservicestorage'"
@@ -45,6 +49,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_testexfiltration2_connectionString": {
+						"value": "[parameters('LS_testexfiltration2_connectionString')]"
 					},
 					"Ls_testlinkservicestorage_connectionString": {
 						"value": "[parameters('Ls_testlinkservicestorage_connectionString')]"
