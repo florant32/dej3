@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Desjardins_LAkeHouse_Destination'"
 		},
+		"Ls_testlinkservicestorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Ls_testlinkservicestorage'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -41,6 +45,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"Ls_testlinkservicestorage_connectionString": {
+						"value": "[parameters('Ls_testlinkservicestorage_connectionString')]"
 					},
 					"LS_DesjardinsLakehouse_connectionString": {
 						"value": "[parameters('LS_DesjardinsLakehouse_connectionString')]"
